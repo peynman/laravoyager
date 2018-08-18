@@ -12,8 +12,9 @@ services:
     links:
       - mysql
     environment:
+      - "DB_CONNECTION=mysql"
+      - "DB_HOST=mysql"
       - "DB_PORT=3306"
-      - "DB_HOST=database"
       - "DB_USERNAME=root"
       - "DB_PASSWORD=1123581321"
       - "DB_DATABASE=laravel"
@@ -27,6 +28,6 @@ services:
       - MYSQL_ROOT_PASSWORD=1123581321
       - MYSQL_DATABASE=laravel
     ports:
-      - "33061:3306"
+      - "3306:3306"
 volumes:
     db_data:
